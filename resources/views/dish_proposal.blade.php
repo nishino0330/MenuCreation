@@ -10,15 +10,15 @@
     <form method="POST">
         @csrf
         <div>
-            <input type="text" class="form-control" name="sentence1" value="{{ isset($sentence1) ? $sentence1 : '' }}">
+            <input type="text" class="form-control" name="sentences[]" value="{{ isset($sentences[0]) ? $sentences[0] : '' }}">
         </div>
         <div>
-            <input type="text" class="form-control" name="sentence2" value="{{ isset($sentence2) ? $sentence2 : '' }}">
+            <input type="text" class="form-control" name="sentences[]" value="{{ isset($sentences[1]) ? $sentences[1] : '' }}">
         </div>
         <div>
-            <input type="text" class="form-control" name="sentence3" value="{{ isset($sentence3) ? $sentence3 : '' }}">
+            <input type="text" class="form-control" name="sentences[]" value="{{ isset($sentences[2]) ? $sentences[2] : '' }}">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">submit</button>
         </form>
 
     
