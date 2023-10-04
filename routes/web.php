@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/chat', [ChatGptController::class, 'index'])->name('chat_gpt-index');
-Route::post('/chat', [ChatGptController::class, 'proposeDish'])->name('chat_gpt-proposeDish');
+Route::post('/chat', [ChatGptController::class, 'chat'])->name('chat_gpt-chat');
