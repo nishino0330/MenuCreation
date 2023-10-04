@@ -27,13 +27,10 @@ class ChatGptController extends Controller
     {
         // バリデーション
         $request->validate([
-            'sentences' => 'required|array|min:3',
-            'sentences.*' => 'required',
-            
+            'sentences' => 'required|array|min:1|filled',
         ], [
             // カスタムエラーメッセージ
-            'sentences.required' => '食材を入力してください',
-            'sentences.min' => '少なくとも３つの食材を入力してください',
+            'sentences.min' => '食材入力してください',
         ]);
 
         // 食材
