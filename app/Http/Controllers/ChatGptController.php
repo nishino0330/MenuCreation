@@ -37,7 +37,7 @@ class ChatGptController extends Controller
         $sentences = $request->input('sentences');
 
         // ChatGPT API処理
-        $chat_response = $this->chat_gpt("これらの食材のみでできる料理名と作り方を３つ日本語で応答してください", $sentences);
+        $chat_response = $this->chat_gpt("これらの食材のみでできる料理名を３つ日本語で応答してください", $sentences);
 
         return view('dish_proposal', compact('sentences', 'chat_response'));
     }
